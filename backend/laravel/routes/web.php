@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     return 'Hello World!';
 });
+
+use App\Http\Controllers\TaskController;
+Route::get('/folders/{id}/tasks', [TaskController::class, 'index'])->name('tasks.index');
