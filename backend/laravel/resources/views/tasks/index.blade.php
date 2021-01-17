@@ -4,23 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ToDo App<</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <title>ToDo App</title>
+  <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
   <header>
-    <nav class="my-navbar">
-      <a class="my-navbar-brand" href="/">ToDo App</a>
+    <nav class="navbar">
+      <a class="navbar-brand" href="/">ToDo App</a>
     </nav>
   </header>
   <main>
-    <div class="containner">
+    <div class="container">
       <div class="row">
-        <div class="col col-mod-4">
-          <nav class="panel panel-default">
-            <div class="panel-heading">フォルダ</div>
-            <div class="panel-body">
-              <a href="#" class="btn btn-default btn-block">
+        <div class="col col-md-4">
+          <nav class="card">
+            <div class="card-header">フォルダ</div>
+            <div class="card-body">
+              <a href="#" class="btn btn-dark btn-block">
                 フォルダを追加する
               </a>
             </div>
