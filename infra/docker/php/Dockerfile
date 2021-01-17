@@ -25,7 +25,15 @@ RUN apt-get update && \
   composer config -g process-timeout 3600 && \
   composer config -g repos.packagist composer https://packagist.org
 
+# Install Node.js 12
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt-get install -y nodejs \
+  && npm install n -g \
+  && n 12
+
 COPY ./infra/docker/php/php-fpm.d/zzz-www.conf /usr/local/etc/php-fpm.d/zzz-www.conf
 COPY ./infra/docker/php/php.ini /usr/local/etc/php/php.ini
 
-WORKDIR /work/backend
+WORKDIR /work/backend/laravel
+
+RUN chown -R www-data:www-data /work/backend
